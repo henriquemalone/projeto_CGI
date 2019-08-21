@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20" uuid="edfbd121-7bf6-4479-a4fb-e2964b9b410a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select * From clientes;]]>
+	</queryString>
+	<field name="idCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="contato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="celular" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cnpj" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numero" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bairro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="complemento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement x="242" y="47" width="325" height="28" uuid="4272a619-7e55-4070-ba8f-33dd7281d81d"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Centro Galvanotécnico Industrial]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="229" height="75" uuid="3355c1be-e34e-4064-9097-00309f6b30d4"/>
+				<imageExpression><![CDATA["C:\\Users\\CGI\\Desktop\\cgi2\\src\\Imagens\\logo.jpeg"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="78" width="567" height="1" uuid="4148738f-9b23-4539-9b5c-189a72591f79"/>
+			</line>
+			<line>
+				<reportElement x="0" y="75" width="567" height="1" uuid="5f2b3d4e-1cc5-4e21-9040-ca25c15ff581"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="136" y="15" width="315" height="33" forecolor="#1A2366" uuid="5106e56d-5d60-4d75-b1e9-df11e4795149"/>
+				<textElement rotation="None">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lista de Clientes Cadastrados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="326" y="21" width="138" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="200e0b31-a129-4d9d-9eed-fa413726a34f"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="86fd68b6-7654-4bca-9c99-e2c88ee7a585"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição dos Clientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="20" width="100" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="f276f24b-bbe5-42e9-b7a4-1b499bfb6461"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="22" width="83" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="de60da57-34b0-4f3e-a418-0f2622c1a526"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="22" width="77" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="76ef3732-1b01-4309-bb8d-ec70b5668fee"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="82" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="f5b050e6-05cf-4321-8e31-1976d3bc8e21"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="41" width="568" height="1" uuid="689efdbc-0bbc-44eb-b6ab-f14771dc39a1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#1A2366"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="244" y="22" width="82" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="5b3029ee-76ce-4fdb-8903-503669e22628"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Celular]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="242" y="1" width="84" height="20" uuid="cc17cd40-b028-4417-b367-6c1c9315ecfd"/>
+				<textFieldExpression><![CDATA[$F{celular}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="1" width="138" height="20" uuid="31a4e14e-971f-4ddd-b004-b26f84df5371"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="83" height="20" uuid="031c5c37-ebec-4023-8d55-e6f03d2af4ba"/>
+				<textFieldExpression><![CDATA[$F{contato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="165" y="0" width="77" height="20" uuid="0cb62e7e-cb69-4210-b6e2-0b5f4c9c671e"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="0" width="100" height="20" uuid="a59279d9-b664-4170-8b16-611f66a3ea9a"/>
+				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="82" height="20" uuid="9733b46e-cbcd-4fb1-b666-22acf113f441"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="26" width="327" height="20" uuid="2aa70cf2-5a9a-485f-8873-f80aa68b423c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Tel: 19 3854-9043	E-mail:cgigalvano@uol.com.br]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="7" width="566" height="1" uuid="8395688a-4c95-482a-9d92-20ff5569c1cc"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="10" width="567" height="16" uuid="98f050a4-a5ca-48a8-8742-870d244f35be"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[CGI - Centro Galvanotécnico Industrial - Rua: Porto Real, 246. Jd. Dal'orto - Sumaré/SP, CEP:13178-040]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="10" width="566" height="1" uuid="fa778512-8904-44f8-9b06-71618f75f824"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

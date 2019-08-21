@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20" uuid="7ded5f95-949c-4945-9e9e-df341d4c95e7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from produtos;]]>
+	</queryString>
+	<field name="idProdutos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lote" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorUnit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantidade" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="75" width="567" height="1" uuid="f19dab7d-9822-4d76-9f4c-16585f4fad8c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="78" width="567" height="1" uuid="96bceb5d-5e1e-499c-8bfe-b4e4a973b483"/>
+			</line>
+			<staticText>
+				<reportElement x="242" y="47" width="325" height="28" uuid="ad441872-8cfb-4995-9508-29b2b4ab94ec"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Centro Galvanotécnico Industrial]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="229" height="75" uuid="c7f79ca2-a572-4495-9ebc-d6dc834be9ec"/>
+				<imageExpression><![CDATA["C:\\Users\\CGI\\Desktop\\cgi2\\src\\Imagens\\logo.jpeg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="112" y="18" width="330" height="33" forecolor="#1A2366" uuid="8f2b288a-fa4d-4525-a450-38b4e6fdd402"/>
+				<textElement rotation="None">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lista de Produtos Cadastrados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="1" width="140" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="3db66fda-462e-4e58-a0cf-8281e0e7a19c"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição dos Produtos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="21" width="190" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="106fb59f-4369-477a-972a-e7b54f69c0bb"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="42" width="568" height="1" uuid="82f1490c-9b20-4160-abad-7429eca1e003"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#1A2366"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="193" y="21" width="135" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="5bed5488-0512-45e5-bd38-86c683d686eb"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lote]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="21" width="100" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="0d44bbd2-d20e-4a38-9f01-d3a04188c0eb"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor Unitário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="21" width="134" height="20" forecolor="#1A2366" backcolor="#1A2366" uuid="13c9b6c1-e480-4160-8537-079e35c92165"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qtd em Estoque]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="190" height="20" uuid="aa92c404-5891-4f02-9721-a0854a7c892d"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="193" y="0" width="135" height="20" uuid="a8ae3c7a-214f-4b37-991d-f397144171fb"/>
+				<textFieldExpression><![CDATA[$F{lote}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="333" y="0" width="100" height="20" uuid="37fd9459-8a47-40d7-9fd1-ca20aa70529e"/>
+				<textFieldExpression><![CDATA[$F{valorUnit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="0" width="134" height="20" uuid="48e93675-648d-47b2-b2cc-23644fec7997"/>
+				<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="53" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="8" width="566" height="1" uuid="faf9343c-39d6-457d-abda-bfd81f25bf24"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="11" width="567" height="16" uuid="9c6d92b0-29ea-45f3-ab20-dd1ac0e8ce0a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[CGI - Centro Galvanotécnico Industrial - Rua: Porto Real, 246. Jd. Dal'orto - Sumaré/SP, CEP:13178-040]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="27" width="327" height="20" uuid="2e387311-7cf3-4ab5-9867-676f261ab8e2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Tel: 19 3854-9043	E-mail:cgigalvano@uol.com.br]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="11" width="566" height="1" uuid="becf11c5-0ce1-4306-9d58-8709f25c0a2e"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
